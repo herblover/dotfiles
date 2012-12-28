@@ -3,7 +3,9 @@ scripte utf-8
 " Language configuration
 
 set nocompatible
-syntax on
+call pathogen#infect()
+syntax enable
+set background=dark
 set nu
 set ai
 set bs=indent,eol,start
@@ -33,7 +35,12 @@ set fencs=utf-8,cp949,cp932,euc-jp,shift-jis,big5,latin1,ucs2-le
 let NERDShutUp=1
 set t_Co=256
 
-colorscheme desert256
+colorscheme solarized
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
 
 filetype plugin indent on
 
