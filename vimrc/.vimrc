@@ -5,7 +5,6 @@ scripte utf-8
 set nocompatible
 call pathogen#infect()
 syntax enable
-set background=dark
 set nu
 set ai
 set bs=indent,eol,start
