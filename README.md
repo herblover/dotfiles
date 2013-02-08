@@ -17,3 +17,10 @@ fenc utf-8
 fencs utf-8,cp949,cp932,euc-jp,shift-jis,big5,latin1,ucs2-le
 NERD commenter Plugin Enabled.
 colorscheme solarized
+
+.tmux.conf
+======================
+
+set terminal to screen-256color
+solarized dark color scheme applied.
+
