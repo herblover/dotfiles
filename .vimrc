@@ -1,8 +1,36 @@
 " YounShin Kang
 " original script by Douglas Black
+" vim-plug {{{
+" from vim-plug README.md
+" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
+call plug#begin('~/.vim/plugged')
+" Make sure you use single quotes
+" sensible.vim
+Plug 'tpope/vim-sensible'
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
+" Any valid git URL is allowed
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+" Using a non-master branch
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
+Plug 'fatih/vim-go', { 'tag': '*' }
+" Plugin options
+Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+" Plugin outside ~/.vim/plugged with post-update hook
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Solarized vim
+Plug 'altercation/vim-colors-solarized'
+" Initialize plugin system
+call plug#end()
+" }}}
 " Colors {{{
 syntax enable " enable syntax processing
-colorscheme badwolf
+set background=dark
+colorscheme solarized
 " }}}
 " Misc {{{
 set ttyfast " faster redraw
@@ -37,7 +65,6 @@ set foldnestmax=10 " max 10 depth
 set foldenable " don't fold files by default on open
 set foldlevelstart=10 " start with fold level of 1
 " }}}
-
 " MacVim {{{
 set guioptions-=r
 set guioptions-=L
@@ -66,7 +93,7 @@ function! <SID>StripTrailingWhitespaces()
     " Do the business:
     %!git stripspace
     " Clean up: restore previous search history, and cursor position
-    let @/=s
+    let @/=_s
     call cursor(l, c)
 endfunction
 " }}}
