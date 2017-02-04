@@ -34,13 +34,11 @@ Plug 'altercation/vim-colors-solarized'
 call plug#end()
 " }}}
 " Colors {{{
-syntax enable " enable syntax processing
 set background=dark
 colorscheme solarized
 " }}}
 " Misc {{{
 set ttyfast " faster redraw
-set backspace=indent,eol,start
 " }}}
 " Space & Tabs {{{
 set tabstop=4 " 4 space tab
@@ -48,20 +46,15 @@ set expandtab " use spaces for tabs
 set softtabstop=4 " 4 space tab
 set shiftwidth=4
 set modelines=1
-filetype indent on
-filetype plugin on
-set autoindent
 " }}}
 " UI layout {{{
 set number " show line number
 set showcmd " show command in bottom bar
 set nocursorline " highlight current line
-set wildmenu
 set showmatch " highlight matching parenthesis
 " }}}
 " Searching {{{
 set ignorecase " ignore case when searching
-set incsearch " search as characters are entered
 set hlsearch " highlight all matches
 " }}}
 " Folding {{{
