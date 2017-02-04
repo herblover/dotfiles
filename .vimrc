@@ -7,6 +7,12 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 " sensible.vim
 Plug 'tpope/vim-sensible'
+" vim-airline
+Plug 'vim-airline/vim-airline'
+let g:airline_powerline_fonts=1
+" vim-airline-themes
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='solarized'
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 " Any valid git URL is allowed
